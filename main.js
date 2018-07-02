@@ -11,14 +11,20 @@ function myTimer() {
   var minutes = date.getMinutes()
   var millis = date.getMilliseconds()
 
-  $("#hours").css("width", `${hours * 17.5}`)
-  $("#minutes").css("width", `${minutes * 7}`)
-  $("#millis").css("width", `${millis * .42}`)
-
-  if(hours > 11) {
-    $("#hours").text(`${hours - 12}` + ' PM')
+  if (hours === 0) {
+    $("#hours").css("width", 35)
   } else {
-    $("#hours").text(`${hours}` + ' AM')
+    $("#hours").css("width", `${hours * 35}`)
   }
-  $("#minutes").text(`${minutes}` + ' minutes')
+  $("#minutes").css("width", `${minutes * 14}`)
+  $("#millis").css("width", `${millis * .84}`)
+
+  if (hours === 0) {
+    $("#hours").text('12')
+  } else if(hours > 11) {
+    $("#hours").text(`${hours - 12}`)
+  } else if(hours > 0 && hours < 12) {
+    $("#hours").text(`${hours}`)
+  }
+  $("#minutes").text(`${minutes}`)
 }
