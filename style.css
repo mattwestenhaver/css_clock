@@ -1,0 +1,30 @@
+#clock {
+  width: 420px;
+  height: 400px;
+  background-color: lightblue;
+  margin: 40px auto;
+  font-size: 40px;
+  text-align: right;
+  line-height: 100px;
+}
+
+#date {
+  height: 100px;
+  background-color: greenyellow;
+}
+
+#hours {
+  height: 100px;
+  background-color: hotpink;
+}
+
+#minutes {
+  height: 100px;
+  background-color: maroon;
+  color: white;
+}
+
+#millis {
+  height: 100px;
+  background-color: darkcyan;
+}
